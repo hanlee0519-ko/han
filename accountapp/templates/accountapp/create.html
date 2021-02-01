@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div style="text-align: center;">
+        <form action="{% url 'accountapp:create' %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" class="btn btn-primary">
+        </form>
+    </div>
+
+{% endblock %}
+
+<!-- {{ form }}  hello_world.html input 태그로 하나 만드는게 아니라, views.py 에서 form_class=UserCreationForm 가지고 옴-->

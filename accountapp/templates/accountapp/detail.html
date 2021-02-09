@@ -12,8 +12,10 @@
             <h2>
                 {{ target_user.profile.nickname }}
                     {% if target_user == user %}
-                    <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
-                        (Edit)
+                    <a class="material-icons"
+                       style="box-shadow: 0 0 4px #ccc; padding: .4rem;"
+                       href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
+                        edit
                     </a>
                     {% endif %}
             </h2>
